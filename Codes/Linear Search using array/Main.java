@@ -30,3 +30,34 @@ class Main{
         }
     }
 }
+
+// Same code using Function
+import java.util.*;
+class Main{
+    static void Myfunction(int size){
+        Scanner sc = new Scanner(System.in);
+        int[] myarray=new int[size];
+        System.out.println("Enter "+size+" numbers of elements: ");
+        for(int i=0;i<size;i++){
+            myarray[i]=sc.nextInt();
+        }
+        System.out.println("The elements in array are: ");
+        for(int i=0;i<size;i++){
+            System.out.println(myarray[i]);
+        }
+        
+        System.out.println("Enter the element to be search: ");
+        int number= sc.nextInt();
+        for(int i=0;i<myarray.length;i++){
+            if(myarray[i]==number){
+                System.out.println("Element "+number+" found at location: "+i);
+            }
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of array: ");
+        int size=sc.nextInt();
+        Myfunction(size);
+    }
+}
